@@ -342,14 +342,14 @@ footer {
 	width: 100%;
 }
 
-/* 6.TOURS */
+/* 6. TOURS */
 .circuits {
 	background-color: rgba(0, 0, 0, 0.5);
 	overflow-x: hidden;
 }
 
 .row_custom h2{
-color: #ccc;
+color: red;
 }
 
 .full
@@ -411,13 +411,14 @@ margin: 0;
 
 	font-size:1em;
 	}
+}
  /* 7.INFO-TOURS */
 
-#description_h2
+.description h2
 {
 	color:white;
 }
-.infocircuits_description p
+.description p
 {
 	text-align:justify;
 	color:white;
@@ -433,15 +434,15 @@ margin: 0;
 {
 	margin-right:-40px;
 }
-.icone .pop
+.icone 
 {
 	margin-bottom:100px;
 	margin-top:70px;
 
 }
-.icone .pop button
+.icone  button
 {
-	background-color:white;
+	background-color:#ccc;
 	opacity:0.3;
 }
 
@@ -456,3 +457,25 @@ margin: 0;
 }
 
 /* 8.FORMS */
+
+.visiteur h2 
+{
+color:white;
+
+}
+.visiteur p 
+{
+color:white;
+
+}
+
+
+
+
+
+
+
+
+
+
+
