@@ -9,6 +9,8 @@ if(is_numeric($_GET['id'])){
 	$query->execute(array($id));
 	$donnee=$query->fetch();
 	
+	var_dump($donnee);
+	
 	if(!$donnee){
 		echo 'L\'article à modifier n\'existe pas ! Sorry...Vous allez être redirigé dans 5 secondes';
 		header('refresh:5;url=materiels.php');
@@ -29,7 +31,8 @@ if(is_numeric($_GET['id'])){
 			</p>
 			<p>
 				<label for='materiel_presentation'> Courte présentation de la société :</label>
-				<input type='text' id='materiel_presentation' name='presentation' value='<?php echo $donnee['presentation'];?>'/>
+				<input type='text' id='materiel_presentation' name='presentation' value="<?php echo $donnee['presentation'];?>"/>
+				<?php echo $donnee['presentation'];?>
 			</p>
 			<p>
 				<label for='materiel_description'> Description de la société :</label>
