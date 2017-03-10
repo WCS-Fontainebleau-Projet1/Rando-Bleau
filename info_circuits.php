@@ -20,7 +20,7 @@
       <div class="col-md-offset-1">
       </div>
 
-    <div class="row carte">
+    <div class="row carte plan">
       <div class="col-md-offset-3 col-md-5">
         <iframe height="300" width="400" frameborder="0" scrolling="no" src="https://www.visorando.com/index.php?component=externe&task=showCarte&idRandonnee=119073&satellite=1&carte=1&navigation=1&panZoom=1&mousePosition=1&scaleLine=1"></iframe><br /><a href="https://www.visorando.com" target="_blank">Visorando</a> 
       </div>
@@ -28,11 +28,11 @@
     </div>
 
 <!--partie Description -->
-    <div class="row text">
-      <div class="col-md-offset-4 col-md-4">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4 description">
         <h2>Description de la randonnée</h2>
-          <p>Du parking des platières d'Apremont, emprunter le sentier de l'érosion (balisage Jaune) et se rendre directement au point de vue sur les Gorges.</br>
-          Puis, repartir sur la droite en continuant de suivre les marques Jaunes pour trouver l'escalier en bois (106 mètres de long et 149 marches) qui vous amène au fond des gorges, dans le "désert". Mais pourquoi donc ce terme car le lieu n'y ressemble vraiment pas? C'est parce qu'au début du 19ème siècle, il n'y avait pas d'arbres, seulement de la bruyère et des rochers et qu'une plantation de pins y a été décidée....</p>
+        <p>Du parking des platières d'Apremont, emprunter le sentier de l'érosion (balisage Jaune) et se rendre directement au point de vue sur les Gorges.</br>
+        Puis, repartir sur la droite en continuant de suivre les marques Jaunes pour trouver l'escalier en bois (106 mètres de long et 149 marches) qui vous amène au fond des gorges, dans le "désert". Mais pourquoi donc ce terme car le lieu n'y ressemble vraiment pas? C'est parce qu'au début du 19ème siècle, il n'y avait pas d'arbres, seulement de la bruyère et des rochers et qu'une plantation de pins y a été décidée....</p>
 
       </div>
       <div class="col-md-offset-4">
@@ -48,29 +48,23 @@
 <?php include_once 'model/connexion_bdd.php';
 $result = $bdd->query('SELECT * FROM commentaires');
 ?>
+ 
+            
 
-
-
-
-        <table>
-          <caption>Vos commentaires</caption>
-            <thead>
-              <tr>
-                <th>Titre</th>
-                <th>Commentaire</th>
-              </tr>
-            </thead>
-
-            <tbody>
+        
               <?php 
                 while ($donnee = $result->fetch()) { ?>
                   
-                  <tr>
-                    <td><?php echo $donnee['titre']; ?></td>
-                    <td><?php echo $donnee['commentaire']; ?></td>
-                  </tr>
+                  <div class="visiteur">
+                    <h2><?php echo $donnee['titre']; ?></h2>
+                    <p><?php echo $donnee['commentaire']; ?></p>
+                    <a href="info_circuits.php?=<?php echo $donnee['id']; ?>">Delete </a>
+                    <a href="info_circuits.php?=<?php echo $donnee['id']; ?>">Edit </a>
+                  </div>
 
-              <?php } ?>
+              <?php } 
+$result->closeCursor();
+               ?>
             </tbody>
         </table>
     </div>
@@ -83,30 +77,32 @@ $result = $bdd->query('SELECT * FROM commentaires');
 
     <div class="row insert">
         <div class="col-md-offset-4 col-md-4">
-           <form method="POST" action="">
+           <form method="POST" action="add_circuit_action.php">
               <fieldest>
-                <label for="titre"></label>
+                <label for="titre">Votre titre</label>
                 <input type="text" name="titre" id="titre"/><br>
-                <label for="texte"></label>
-                <input type="texte" name="texte" id="texte"/>
+                <label for="texte">Vos commentaires</label>
+                <input type="text" name="commentaire" id="texte"/>
               </fieldest> 
-            </form>  
-        </div>
+                <div class="row button">
+                  <div class="col-md-offset-4 col-md-4 validator">
+                    <div id="submit">
+                      <input type="submit" value="Partager"/>
+                    </div>
+                  </div>
+
+                  <div class="col-md-offset-4">
+                  </div>
+              </div>
+          </form>  
+      </div>
 
         <div class="col-md-offset-4">
         </div>
     </div>
 
-    <div class="row button">
-        <div class="col-md-offset-4 col-md-4">
-          <div id="submit">
-            <input type="submit" value="+"/>
-          </div>
-        </div>
 
-        <div class="col-md-offset-4">
-        </div>
-    </div>
+
 
 </div>
 
