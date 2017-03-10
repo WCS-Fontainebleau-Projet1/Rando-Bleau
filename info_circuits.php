@@ -68,6 +68,7 @@ $result = $bdd->query('SELECT * FROM commentaires');
                   <tr>
                     <td><?php echo $donnee['titre']; ?></td>
                     <td><?php echo $donnee['commentaire']; ?></td>
+                    <a href="info_circuits.php?=<?php echo $donnee['id']; ?>Delete </a>
                   </tr>
 
               <?php } ?>
@@ -88,7 +89,7 @@ $result = $bdd->query('SELECT * FROM commentaires');
                 <label for="titre"></label>
                 <input type="text" name="titre" id="titre"/><br>
                 <label for="texte"></label>
-                <input type="texte" name="texte" id="texte"/>
+                <input type="text" name="texte" id="texte"/>
               </fieldest> 
             </form>  
         </div>
@@ -100,7 +101,7 @@ $result = $bdd->query('SELECT * FROM commentaires');
     <div class="row button">
         <div class="col-md-offset-4 col-md-4">
           <div id="submit">
-            <input type="submit" value="+"/>
+            <input type="submit" value="Partager"/>
           </div>
         </div>
 
