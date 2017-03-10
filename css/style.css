@@ -1,0 +1,458 @@
+/*--------------------------------------------------*\
+    1.BODY AND MAINS STYLES
+\*--------------------------------------------------*/
+/*--------------------------------------------------*\
+    2.HEADER
+\*--------------------------------------------------*/
+/*--------------------------------------------------*\
+    3.FOOTER
+\*--------------------------------------------------*/
+/*--------------------------------------------------*\
+    4. ACTUALITES's PAGE
+\*--------------------------------------------------*/
+/*--------------------------------------------------*\
+    5. TOOLS' PAGE
+\*--------------------------------------------------*/
+/*--------------------------------------------------*\
+    6. TOURS
+\*--------------------------------------------------*/
+/*--------------------------------------------------*\
+    7. INFO-TOURS
+\*--------------------------------------------------*/
+/*--------------------------------------------------*\
+    8. FORMS
+\*--------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Amiko');
+
+/* 1.BODY AND MAIN STYLES */
+html,
+body{
+	background: url('../images/forest1.jpeg') no-repeat fixed center;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	overflow-x: hidden;
+	font-family: 'Amiko';
+}
+
+.container_custom{
+	background-color: rgba(0, 0, 0, 0);
+	padding-top: calc((70vh - 300px)/2);
+	width: 80%;
+	height: 70vh;
+	overflow: auto;
+}
+
+.home {
+	overflow: hidden;
+}
+
+	.link a{
+		background-color: rgba(0, 0, 0, 0.5);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: auto;
+		font-size: 2em;
+		color: white;
+		padding: 15px;
+	}
+
+	.link a:hover{
+		color: orange;
+	}
+
+	.image_container{
+		height: 200px;
+		margin-bottom: 10px;
+	}
+
+/* 2.HEADER */
+header
+{
+	position: absolute;
+	top: 0;
+	background-color: none;
+	width: 100%;
+	height: 80px;
+}
+	.logo_bleau
+	{
+		width:50px;
+		height:50px;
+		margin-top: 10px;
+		margin-left: 25px;
+	}
+	header button{
+		background: none;
+		border: none;
+		outline: none;
+	}
+
+.button_menu {
+	display: none;
+}
+
+.menu_custom {
+	width: 40px;
+	height: 40px;
+	margin-top: 20px;
+}
+
+.custom-dropdown-menu {
+	display: block;
+	top: 20px;
+	left: -380px;
+	color: black;
+	width: 700px;
+	background-color: rgba(0, 0, 0, 0);
+	border: none;
+	box-shadow: none;
+}
+	.custom-dropdown-menu li {
+		display: inline-block;
+
+	}
+		.custom-dropdown-menu li a {
+			font-size: 1.5em;
+		}
+
+		.custom-dropdown-menu li a:hover{
+			background-color: rgba(0, 0, 0, 0);
+			border-bottom: 1px solid black;
+		}
+
+@media screen and (max-width: 768px){
+	.logo_bleau{
+		margin-left: 0;
+	}
+	.custom-dropdown-menu {
+		left: -330px;
+	}
+		.custom-dropdown-menu li a {
+			font-size: 1.2em;
+		}
+	.button_menu {
+		display: block;
+	}
+	.custom-dropdown-menu {
+		display: none;
+		left: -400px;
+	}
+}
+/*2.FOOTER */
+footer {
+	position: absolute;
+	bottom: 0;
+	margin-top: 20px;
+	background: none;
+	width: 100%;
+	height: 50px;
+
+}
+	footer h1 {
+		height: 40px;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+.btn_custom {
+	background: rgba(40,40,40,0);
+	border-color: white;
+	border-radius: 0;
+	padding: 7px 15px;
+	margin-left: 0;
+	font-size: 0.4em;
+}
+
+.btn_custom:hover {
+	background-color: black;
+	border-color: black;
+}
+
+.btn_custom:focus {
+	background-color: rgba(0,0,0,0);
+	border-color: white;
+	border-radius: 0;
+	box-shadow: 0;
+	color: white;
+
+}
+
+.logo_onf {
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+  .logo_onf a{
+    display: block;
+    height: 45px;
+  }
+  	.logo_onf a img {
+		height: 100%;
+	}
+
+.social {
+	height: 40px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0;
+}
+	.social a {
+		position: relative;
+		display: block;
+		padding: 8px;
+	}
+		.social a img {
+			display: block;
+			width: 30px;
+			height: 30px;
+			padding: 0;
+		}
+
+@media screen and (max-width: 768px) {
+	.logo_onf{
+		display: none;
+	}
+
+	.social {
+		justify-content: center;
+	}
+}
+/* 4.ACTUALITES's PAGE */
+.container_custom_actu {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+}
+
+.actu_link {
+	display: inline-block;
+	padding: 5px;
+	font-style: none;
+	color: red;
+	text-align: center;
+}
+
+.actu {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	height: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: white;
+	margin-top: 0;
+}
+	.actu img {
+		display: block;
+		position: relative;
+		float: left;
+		margin: 20px 20px 5px 5px;
+		width: 30%;
+	}
+
+	.actu h2 {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.actu p {
+		text-align: justify;
+	}
+
+/* 5.TOOLS' PAGE */
+
+.materiel_container_custom{
+	padding: 10px;
+	overflow: visible;
+	margin-bottom: 10px;
+	z-index: 20;
+	overflow: auto;
+	height: 60vh;
+	background: rgba(0,0,0,.6);
+}
+
+.materiel_row_custom{
+	position: relative;
+	height: 100%;
+	margin-bottom: 10px;
+	margin-left: 0;
+	margin-right: 0;
+	border-bottom: 2px solid white;
+}
+
+.materiel_row_custom:last-child{
+	margin-bottom: 0;
+}
+
+.materiel_full{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	flex-direction: column;
+}
+
+
+.materiel_full p{
+	color: #222;
+	text-align: center;
+	background: #ccc;
+	padding: 5px;
+}
+
+.materiel_description{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	flex-direction: column;
+}
+
+.materiel_description p{
+	color: white;
+	font-size: 1em;
+	margin: 7px;
+	text-shadow: 1px 1px 1px black;
+	text-align: justify;
+}
+
+.materiel_full img{
+	max-width: 100%;
+	background: white;
+	margin-bottom: 10px;
+}
+
+.materiel_full img:hover{
+	box-shadow: 0 0 30px white;
+}
+
+.materiel_buttons{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 5px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+/* 6.TOURS */
+.circuits {
+	background-color: rgba(0, 0, 0, 0.5);
+	overflow-x: hidden;
+}
+
+.row_custom h2{
+color: #ccc;
+}
+
+.full
+{
+padding: 0;
+margin: 0;
+}
+
+.full2
+{
+	overflow:hidden;
+	padding:0;
+}
+
+.full2 img
+{
+	max-width:100%;
+	height: auto;
+	text-align:center
+}
+.full2 img:hover
+{
+	transform:scale(1.1);
+	transition: .4s;
+}
+.full2 p
+{
+	position:absolute;
+	top: 70px;
+	height:50px;
+	line-height: 50px;
+	color: #ccc;
+	text-align: center;
+	width: 100%;
+	background: rgba(0,0,0, 0.6);
+
+}
+
+
+
+@media all and (max-width:600px)
+{
+.full
+
+	{
+		margin:auto;
+		width:20%;
+		height:20%;
+	}
+.full2 p
+	{
+
+		font-size:0.6em;
+		top:20px;
+
+	}
+.row_custom h2
+	{
+
+	font-size:1em;
+	}
+ /* 7.INFO-TOURS */
+
+ .col-md-4 h2
+{
+	color:white;
+}
+ .col-md-4 p
+{
+	text-align:justify;
+	color:white;
+
+}
+.col-md-5 iframe
+{
+	padding-top:30px;
+
+
+}
+.info
+{
+	margin-right:-40px;
+}
+.icone
+{
+	margin-bottom:100px;
+	margin-top:70px;
+
+}
+.icone button
+{
+	background-color:white;
+	opacity:0.3;
+}
+
+@media all and (max-width:600px)
+{
+.icone button
+
+	{
+		margin-left:90px;
+
+	}
+}
+
+/* 8.FORMS */
