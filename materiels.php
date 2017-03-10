@@ -14,7 +14,7 @@ $query = $bdd->query('SELECT * FROM article ORDER BY Id DESC');
 		
 		<div class='row materiel_row_custom'>
 			<div class='col-md-4 materiel_full'><a href='<?php echo $donnee['lien'];?>' target='_blank'><img src='<?php echo $donnee['image'];?>' alt='<?php echo $donnee['image_description'];?>'/></a>
-				<p><?php echo $donnee['presentation'];?> </p>
+				<p><?php echo html_entity_decode($donnee['presentation']);?> </p>
 			</div>
 			<div class='col-md-8 materiel_description'>
 				<p>

@@ -1,11 +1,14 @@
 ﻿<!doctype html>
+
 <html>
 <head>
 <meta charset='utf-8'/>
 <title> Création articles </title>
-<link rel='stylesheet' type='text/css' href='css/add_materiels_css'/>
+<link rel='stylesheet' type='text/css' href='css/style.css'>
 </head>
+
 <body>
+	
 	<form method='post' action='add_materiels_action.php'>
 	<p>
 		<label for='materiel_image'> Logo de la société :</label>
@@ -16,6 +19,7 @@
 		<input type='text' id='materiel_image_description' name='image_description'/>
 	</p>
 	<p>
+		
 		<label for='materiel_presentation'> Courte présentation de la société :</label>
 		<input type='text' id='materiel_presentation' name='presentation'/>
 	</p>
@@ -28,6 +32,7 @@
 		<input type='text' id='materiel_lien' name='lien'/>
 	</p>	
 		<input type='submit'/>
+		<a href='materiels.php'> retour </a>
 	
 	</form>
 

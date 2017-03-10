@@ -342,6 +342,33 @@ footer {
 	width: 100%;
 }
 
+#materiel_description{
+	width: 30%;
+	height: 200px;
+}
+
+#materiel_resultat_description{
+	background: rgba(0,0,0,.7);
+	color: white;
+	width: 50%;
+}
+
+#materiel_description_button{
+	border: none;
+	padding: 10px;
+	background: #b22222;
+	color: white;
+	width: auto;
+}
+
+.materiel_lien{
+	color: white;
+}
+
+#materiel_lien{
+	width: 30%;
+}
+
 /* 6.TOURS */
 .circuits {
 	background-color: rgba(0, 0, 0, 0.5);
