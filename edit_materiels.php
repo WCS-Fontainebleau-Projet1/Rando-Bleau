@@ -22,21 +22,45 @@ if(is_numeric($_GET['id'])){
 
 <script type='text/javascript'>
 var selectedElt;
+var selectionStart;
+var selectionEnd;
+var contentElt;
+
 function selecter(){
 selectedElt = window.getSelection().toString();
+selectionStart = document.getElementById('materiel_description').selectionStart+3;
+selectionEnd = document.getElementById('materiel_description').selectionEnd+3;
+console.log(selectionStart, selectionEnd);
 }
-var contentElt;
+
 function changeColor(){
 	if(selectedElt !== ''){
 		contentElt = document.getElementById('materiel_description').value;
-		contentElt = contentElt.replace("" + selectedElt + "", "<span style='font-weight:bold'>" + selectedElt + "</span>");
-		console.log(contentElt);
+		contentElt = contentElt.replace("" + selectedElt + "", "<b>" + selectedElt + "</b>");
 		document.getElementById('materiel_description').value = contentElt;
 		document.getElementById('materiel_resultat_description').innerHTML = contentElt;
+		keepTextSelected();
 	}
 	else{
 		console.log('aucune sélection');
 	}
+}
+
+function changeDecoration(){
+	if(selectedElt !== ''){
+		contentElt = document.getElementById('materiel_description').value;
+		contentElt = contentElt.replace("" + selectedElt + "", "<u>" + selectedElt + "</u>");
+		document.getElementById('materiel_description').value = contentElt;
+		document.getElementById('materiel_resultat_description').innerHTML = contentElt;
+		keepTextSelected();
+	}
+	else{
+		console.log('aucune sélection');
+	}
+}
+function keepTextSelected(){
+	contentElt.focus();
+	contentElt.setSelectionRange(selectionStart, selectionEnd);
 }
 </script>
 		
@@ -57,8 +81,9 @@ function changeColor(){
 			
 			<p>
 				<label for='materiel_description'> Description de la société :</label><br />
-				<textarea id='materiel_description' name='description'><?php echo $donnee['description'];?></textarea><br /><br />
+				<textarea id='materiel_description' name='description' ><?php echo $donnee['description'];?></textarea><br /><br />
 				<input type='button' id='materiel_description_button' value='Mettre en gras' onmouseover='selecter()' onclick='changeColor()'/>
+				<input type='button' id='materiel_description_button' value='Souliner' onmouseover='selecter()' onclick='changeDecoration()'/>
 			</p>
 				<div id='materiel_resultat_description'>
 					<p> Résultat </p>
